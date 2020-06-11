@@ -11,13 +11,13 @@ main = do
 
 startgame :: Board -> Field -> IO ()
 startgame board player
-  | checkWinner1 board = putStrLn " Felicitari Player 1 -> Ai castigat!"
-  | checkWinner2 board = putStrLn " Felicitari Player 2 -> Ai castigat!"  
+  | checkWinner1 board = putStrLn " Felicitari Player 1(O) -> Ai castigat!"
+  | checkWinner2 board = putStrLn " Felicitari Player 2(@) -> Ai castigat!"  
   | otherwise = do
 	   print board
 	   if player == Circle1 then
-	     putStrLn "Player 1 -> Este randul tau!"
-	   else putStrLn "Player 2 -> Este randul tau!"	 	  
+	     putStrLn "Player 1(O) -> Este randul tau!"
+	   else putStrLn "Player 2(@) -> Este randul tau!"	 	  
 	   putStrLn "Alege linia pentru urmatoarea mutare:"
 	   linie <- getLine
 	   putStrLn "Alege coloana pentru urmatoarea mutare:"

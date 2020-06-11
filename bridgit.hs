@@ -66,9 +66,6 @@ getFieldRow :: Int -> [Field] -> Field
 getFieldRow 0 [] = Null
 getFieldRow 0 (head:tail) = head
 getFieldRow x (head:tail) = getFieldRow (x-1) tail
- 	  
-winner :: Board -> Bool
-winner board = False
 
 getLinie :: String -> Field
 getLinie "orizontala" = HorizontalLine
